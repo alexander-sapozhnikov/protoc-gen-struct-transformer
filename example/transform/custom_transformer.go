@@ -3,7 +3,7 @@
 
 package transform
 
-import "github.com/bold-commerce/protoc-gen-struct-transformer/example"
+import "github.com/alexander-sapozhnikov/protoc-gen-struct-transformer/example"
 
 // PbCustomTypeToStringPtrVal is an example of the custom transformer from Pb to go
 func PbCustomTypeToStringPtrVal(src *example.CustomType, opts ...TransformParam) string {
@@ -57,10 +57,11 @@ func StringToPbCustomOneofValPtr(src string, opts ...TransformParam) *example.Cu
 
 // ToPbValPtr is a transformer for a non-supported type
 // TODO: We need to rename the method to include a field name or type to it.
-//       So we can have more than 1 unsupported type in the file.
-//       Alternatively you can use `custom` attribute to make a custom transformer
-//       Current implementation is a bug, but it is used as a feature,
-//       so changing the method name will break backward compatibilty
+//
+//	So we can have more than 1 unsupported type in the file.
+//	Alternatively you can use `custom` attribute to make a custom transformer
+//	Current implementation is a bug, but it is used as a feature,
+//	so changing the method name will break backward compatibilty
 func ToPbValPtr(src string, opts ...TransformParam) *example.NotSupportedOneOf {
 	return &example.NotSupportedOneOf{TheDecl: &example.NotSupportedOneOf_StringValue{StringValue: src}}
 }

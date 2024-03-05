@@ -1,6 +1,6 @@
 // Transformation function generator for gRPC.
 //
-// Overview
+// # Overview
 //
 // Protocol buffers complier (protoc) https://github.com/protocolbuffers/protobuf
 // generates structures based on message definition in *.proto file. It's
@@ -9,7 +9,7 @@
 // own structures. In this case you have to convert generated structures into
 // structures use in business logic and vice versa.
 //
-// See documentation and usage examples on https://github.com/bold-commerce/protoc-gen-struct-transformer/blob/master/README.md
+// See documentation and usage examples on https://github.com/alexander-sapozhnikov/protoc-gen-struct-transformer/blob/master/README.md
 package main
 
 import (
@@ -20,7 +20,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/bold-commerce/protoc-gen-struct-transformer/generator"
+	"github.com/alexander-sapozhnikov/protoc-gen-struct-transformer/generator"
 	plugin "github.com/gogo/protobuf/protoc-gen-gogo/plugin"
 	"github.com/golang/protobuf/proto"
 	"golang.org/x/tools/imports"

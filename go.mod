@@ -1,4 +1,4 @@
-module github.com/bold-commerce/protoc-gen-struct-transformer
+module github.com/alexander-sapozhnikov/protoc-gen-struct-transformer
 
 go 1.13
 

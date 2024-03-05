@@ -1,9 +1,9 @@
 # Transformation function generator for gRPC.
 
-[![Build Status](https://travis-ci.com/bold-commerce/protoc-gen-struct-transformer.svg?branch=master)](https://travis-ci.com/bold-commerce/protoc-gen-struct-transformer)
-[![GoDoc](https://godoc.org/github.com/bold-commerce/protoc-gen-struct-transformer?status.svg)](https://godoc.org/github.com/bold-commerce/protoc-gen-struct-transformer)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/bold-commerce/protoc-gen-struct-transformer?sort=semver)](https://github.com/bold-commerce/protoc-gen-struct-transformer/releases)
-[![BSD-3-Clause](https://img.shields.io/github/license/bold-commerce/protoc-gen-struct-transformer)](./LICENSE)
+[![Build Status](https://travis-ci.com/alexander-sapozhnikov/protoc-gen-struct-transformer.svg?branch=master)](https://travis-ci.com/alexander-sapozhnikov/protoc-gen-struct-transformer)
+[![GoDoc](https://godoc.org/github.com/alexander-sapozhnikov/protoc-gen-struct-transformer?status.svg)](https://godoc.org/github.com/alexander-sapozhnikov/protoc-gen-struct-transformer)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/alexander-sapozhnikov/protoc-gen-struct-transformer?sort=semver)](https://github.com/alexander-sapozhnikov/protoc-gen-struct-transformer/releases)
+[![BSD-3-Clause](https://img.shields.io/github/license/alexander-sapozhnikov/protoc-gen-struct-transformer)](./LICENSE)
 
 <!-- vim-markdown-toc GFM -->
 
@@ -149,7 +149,7 @@ which should be placed into $PATH to be available for `protoc`.
 #### Homebrew
 
 ```shell
-% brew tap bold-commerce/tap
+% brew tap alexander-sapozhnikov/tap
 % brew install protoc-gen-struct-transformer
 ```
 
@@ -158,8 +158,8 @@ If you're going to make changes to plugin, use `go get ...` or `git clone ...`
 
 ```shell
 % export GO111MODULE=on
-% go get -u -d github.com/bold-commerce/protoc-gen-struct-transformer
-% cd $GOPATH/src/github.com/bold-commerce/protoc-gen-struct-transformer
+% go get -u -d github.com/alexander-sapozhnikov/protoc-gen-struct-transformer
+% cd $GOPATH/src/github.com/alexander-sapozhnikov/protoc-gen-struct-transformer
 // make changes
 % go install
 ```
@@ -177,7 +177,7 @@ To configure plugin you have to use **file level** options listed below. The
 plugin will not process file without these options.
 ```proto
 // This import allows to use this options.
-// Relatively to import_path: github.com/bold-commerce/protoc-gen-struct-transformer.
+// Relatively to import_path: github.com/alexander-sapozhnikov/protoc-gen-struct-transformer.
 // See Makefile for mapping details.
 import "options/annotations.proto";
 
@@ -225,7 +225,7 @@ message Product {
 ```shell
 protoc \
   --proto_path=github.com/gogo:. \
-  --go_out=Moptions/annotations.proto=github.com/bold-commerce/protoc-gen-struct-transformer/options,plugins=grpc:. \
+  --go_out=Moptions/annotations.proto=github.com/alexander-sapozhnikov/protoc-gen-struct-transformer/options,plugins=grpc:. \
   --struct-transformer_out=package=transform:. \
   ./message.proto
 ```
